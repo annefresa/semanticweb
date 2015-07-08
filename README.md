@@ -1,7 +1,8 @@
-# semanticweb
+# Studentisches Projekt der HTWK Leipzig im Modul "Semantic Web"
+~ semanticweb ~
 
 #### /src: 
-Alle Java-Files der Applikation zum Auslesen der Daten und erstellen des RDF-Files.
+Alle Java-Files der Applikation zum Auslesen der Daten und Erstellen des RDF-Files.
 
 #### /rdf:
 Resultierendes RDF-File.
