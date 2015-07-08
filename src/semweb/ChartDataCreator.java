@@ -10,6 +10,7 @@ import jxl.Workbook;
 import jxl.read.biff.BiffException;
 
 /**
+ * Erstellen eines angepassten CSV-Files fuer die Visualisierung der Daten.
  * 
  * fuer https://www.meta-chart.com/scatter-plot oder
  * http://www.livephysics.com/tools/mathematical-tools/calculate-linear-
@@ -23,6 +24,9 @@ public class ChartDataCreator {
 	public static ArrayList<String[]> Data = new ArrayList<>();
 	public static ArrayList<String> rawData = new ArrayList<>();
 
+	/**
+	 * Erstellen eines angepassten CSV-Files fuer die Visualisierung der Daten.
+	 */
 	public void createChartData() {
 		String inputFile = "/Users/anmt/Desktop/queryResults.xls";// System.getProperty("user.dir")
 																	// +

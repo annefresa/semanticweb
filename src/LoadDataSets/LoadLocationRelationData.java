@@ -15,10 +15,8 @@ public class LoadLocationRelationData {
 	public String Region;
 
 	/**
-	 * 
-	 * 0: County
-	 * 
-	 * 1: Region
+	 * Laden des Datasets der Daten fuer die Zuordnung der Counties zu den
+	 * Regions (HTML) 0: County 1: Region
 	 * 
 	 * @param strings
 	 * @return
@@ -64,6 +62,12 @@ public class LoadLocationRelationData {
 		return LocationData;
 	}
 
+	/**
+	 * Anpassen der Regionsbezeichnung (ohne "England" etc.)
+	 * 
+	 * @param Region
+	 * @return
+	 */
 	public String formRegionName(String Region) {
 
 		String[] splittedRegion = Region.split("_");
@@ -94,6 +98,13 @@ public class LoadLocationRelationData {
 		return Region;
 	}
 
+	/**
+	 * Anpassen der Countybezeichnung (Leerzeichen durch Unterstrich ersetzen
+	 * und entfernen des Wortes "County" aus der Bezeichnung)
+	 * 
+	 * @param County
+	 * @return
+	 */
 	public String formCountyName(String County) {
 		boolean change = false;
 

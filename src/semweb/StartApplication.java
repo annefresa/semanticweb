@@ -7,23 +7,6 @@ package semweb;
  * ein geeignetes Format zu uebertragen (z.B. hier: RDF mithilfe des Jena-Frameworks von 
  * Apache). Anschliessend sollen die Daten in einen Triple Store (hier: Fuseki) 
  * importiert und per SPARQL ausgewertet werden.
- * 
- * Die Fragestellung fuer den konkreten Fall lautet:
- * Einflüsse auf die Kriminalität in britischen Großstädten
- * Welche sozialen und lokalen Kriterien nehmen Einfluss auf die Häufigkeit von 
- * Kriminalitätnin britischen Städten oder Regionen? Untersucht werden sollen dabei
- * verschiedene Orte (Städte, Regionen). Es ist zu überprüfen, ob eine Abhängigkeit 
- * zur Jahreszeit, Arbeitslosigkeit und Population besteht und wie sich diese über 
- * einem bestimmten Zeitraum entwickelt und verändert hat. Möglichst viele Kriterien 
- * sollen im Umfang der Arbeit umgesetzt werden. (Fokus: Britische Städte)
- * 
- * Zielerfuellung (selbst gesetzt):
- * Im Rahmen des Projekts war es aus zeitlichen Gruenden nur moeglich, die Staedte Englands
- * zu untersuchen. Schnittstellen fuer die Erweiterungen für Wales, North Ireland und Scotland
- * sind aber bereits vorhanden und koennen jederzeit nachgetragen werden.
- * Auf monatsbasis wurden pro County Kriminalitaetsvorkommen, Bevoelkerung und Arbeitslosikgeit
- * untersucht. Analysen von Abhaengigkeiten zur Jahreszeit koennen ebenfalls vorgenommen werden. * 
- * 
  * @author anmt
  * 
  */

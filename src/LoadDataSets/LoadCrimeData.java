@@ -13,12 +13,10 @@ public class LoadCrimeData {
 	public ArrayList<String[]> CrimeData = new ArrayList<>();
 
 	/**
+	 * Laden des Datasets der Daten zu den Kriminalitaetsvorkommen (CSV in
+	 * komplexer Ordnerstruktur)
 	 * 
-	 * 0: Location
-	 * 
-	 * 1: Date
-	 * 
-	 * 2: Number Of Crime
+	 * 0: Location 1: Date 2: Number Of Crime
 	 * 
 	 * @param res
 	 * @return
@@ -46,6 +44,14 @@ public class LoadCrimeData {
 		return CrimeData;
 	}
 
+	/**
+	 * Auslesen der County-Bezeichnung aus dem File-Name, Ersetzen der
+	 * Bindestriche durch Unterstriche, Groﬂsetzen der ersten Buchstabens pro
+	 * Wort
+	 * 
+	 * @param file
+	 * @return
+	 */
 	public String getLocation(File file) {
 		String Location = file.toString().substring(35,
 				file.toString().length() - 11);
@@ -78,11 +84,23 @@ public class LoadCrimeData {
 		return Location;
 	}
 
+	/**
+	 * Auslesen des Datums aus dem File-Name
+	 * 
+	 * @param file
+	 * @return
+	 */
 	public String getDate(File file) {
 		String Date = file.toString().substring(19, 26);
 		return Date;
 	}
 
+	/**
+	 * Auslesen der Anzahl der Kriminalitaetsvorkommen (Zeilenanzahl - 1)
+	 * 
+	 * @param file
+	 * @return
+	 */
 	public String getCrimeNumber(File file) {
 		String CrimeNumber = null;
 		int ctr = 0;

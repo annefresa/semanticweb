@@ -17,11 +17,7 @@ public class LoadUnemploymentData {
 	public String UnemploymentNumber;
 
 	/**
-	 * 
-	 * 0: Region
-	 * 
-	 * 1: Date
-	 * 
+	 * Laden des Datasets der Daten der Arbeitslosigkeit (XSL) 0: Region 1: Date
 	 * 2: Number Of Unemployment
 	 * 
 	 * @param res
@@ -62,6 +58,13 @@ public class LoadUnemploymentData {
 		return UnemploymentData;
 	}
 
+	/**
+	 * Anpassen der Regionsbezeichnungen (Ersetzen der Leerzeichen durch
+	 * Unterstriche)
+	 * 
+	 * @param Region
+	 * @return
+	 */
 	public String formatRegion(String Region) {
 		StringBuilder sb = new StringBuilder(Region);
 		sb.setCharAt(0, Character.toUpperCase(sb.charAt(0)));
@@ -135,6 +138,13 @@ public class LoadUnemploymentData {
 		return date;
 	}
 
+	/**
+	 * Entfernen der Kommas aus den Zahlen zur besseren weiteren Verarbeitung
+	 * (Umwandlund in double und Visualisierung)
+	 * 
+	 * @param number
+	 * @return
+	 */
 	public String formatNumbers(String number) {
 
 		if (number.contains(",")) {

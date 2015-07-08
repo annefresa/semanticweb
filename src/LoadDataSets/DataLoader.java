@@ -5,6 +5,13 @@ import java.util.Date;
 
 import semweb.Resources;
 
+/**
+ * Klasse zum Laden der verschiedenen Datasets.
+ * 
+ * @author anmt
+ *
+ */
+
 public class DataLoader {
 
 	public ArrayList<String[]> CrimeData = new ArrayList<>();
@@ -70,9 +77,8 @@ public class DataLoader {
 	}
 
 	/**
-	 * 0:Location, 1:Date, 2:Number of Population, 3:Location Type
-	 * 
-	 * Information: Es werden nur Daten mit LocationType 'uacounty' uebergeben
+	 * 0:Location, 1:Date, 2:Number of Population, 3:Location Type Information:
+	 * Es werden nur Daten mit LocationType 'uacounty' uebergeben
 	 * 
 	 * @return
 	 */

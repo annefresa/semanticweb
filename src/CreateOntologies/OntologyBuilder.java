@@ -16,10 +16,24 @@ import com.hp.hpl.jena.vocabulary.RDF;
 import com.hp.hpl.jena.vocabulary.RDFS;
 import com.hp.hpl.jena.vocabulary.XSD;
 
+/**
+ * Klasse zur Erstellung der Ontology und des RDF-Files fuer SPARQL-Abragen.
+ * 
+ * @author anmt
+ *
+ */
 public class OntologyBuilder {
 
 	public Resources res = new Resources();
 
+	/**
+	 * Erstellen der Ontology und des RDF-Files.
+	 * 
+	 * @param crimeData
+	 * @param locationRelationData
+	 * @param unemploymentData
+	 * @param populationData
+	 */
 	public void createOntology(ArrayList<String[]> crimeData,
 			ArrayList<String[]> locationRelationData,
 			ArrayList<String[]> unemploymentData,
@@ -109,9 +123,9 @@ public class OntologyBuilder {
 		for (String[] entity : locationRelationData) {
 			Resource county = model.createResource(uri + entity[0]);
 			Resource region = model.createResource(uri + entity[1]);
-			model.add(county, countyInRegion, region);
-			model.add(region, RDF.type, regionRes);
 			model.add(county, RDF.type, countyRes);
+			model.add(region, RDF.type, regionRes);
+			model.add(county, countyInRegion, region);
 		}
 
 		for (String[] entity : unemploymentData) {

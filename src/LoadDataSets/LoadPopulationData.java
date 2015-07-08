@@ -17,14 +17,8 @@ public class LoadPopulationData {
 	public String PopulationNumber;
 
 	/**
-	 * 
-	 * 0: Location
-	 * 
-	 * 1: Date
-	 * 
-	 * 2: Number Of Population
-	 * 
-	 * 3: Location Type
+	 * Laden des Datasets der Daten der Bevoelkerung (XSL) 0: Location 1: Date
+	 * 2: Number Of Population 3: Location Type
 	 * 
 	 * Information: Es werden nur Daten mit LocationType 'uacounty' uebergeben
 	 * 
@@ -78,6 +72,12 @@ public class LoadPopulationData {
 		return PopulationData;
 	}
 
+	/**
+	 * Entfernen der Namenszusaetze (South, West etc. zum besseren Matching)
+	 * 
+	 * @param Location
+	 * @return
+	 */
 	public String getLocation(String Location) {
 
 		if (Location.contains("South ")) {
@@ -96,8 +96,13 @@ public class LoadPopulationData {
 		return Location;
 	}
 
+	/**
+	 * Erfassen des LocationTypes, da nur Counties von Interesse sind.
+	 * 
+	 * @param LocationType
+	 * @return
+	 */
 	public String getLocationType(String LocationType) {
-
 		if (LocationType.equals("cou"))
 			LocationType = "country";
 		else if (LocationType.equals("uac"))
@@ -118,6 +123,13 @@ public class LoadPopulationData {
 		return LocationType;
 	}
 
+	/**
+	 * Entfernen der Punkte aus den Zahlen zur besseren weiteren Verarbeitung
+	 * (Umwandlund in double und Visualisierung)
+	 * 
+	 * @param number
+	 * @return
+	 */
 	public String formatNumbers(String number) {
 
 		if (number.contains(".")) {
@@ -131,6 +143,13 @@ public class LoadPopulationData {
 		return number;
 	}
 
+	/**
+	 * Anpassen der Location-Bezeichnung (Ersetzen der Leerzeichen durch
+	 * Unterstriche)
+	 * 
+	 * @param Location
+	 * @return
+	 */
 	public String formatLocation(String Location) {
 		StringBuilder sb = new StringBuilder(Location);
 		sb.setCharAt(0, Character.toUpperCase(sb.charAt(0)));
