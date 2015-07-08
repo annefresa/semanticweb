@@ -1,8 +1,10 @@
 # semanticweb
 
-/src: Alle Java-Files der Applikation zum Auslesen der Daten und erstellen des RDF-Files.
+### /src: 
+Alle Java-Files der Applikation zum Auslesen der Daten und erstellen des RDF-Files.
 
-\rdf: Resultierendes RDF-File.
+/rdf:
+Resultierendes RDF-File.
 
 sparql_requests: Mögliche SPARQL-Abfragen zum Projekt.
 
