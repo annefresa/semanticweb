@@ -1,0 +1,13 @@
+PREFIX am: <http://www.imn.htwk-leipizg.de/~amatthes/semweb/schema#>
+
+SELECT COUNT(*)
+WHERE{
+  ?crime am:hasCrimeDate ?Date .
+  ?pop am:hasPopDate ?Date .
+  
+  ?crime am:hasCrimeCounty ?County .
+  ?pop am:hasPopCounty ?County .
+  
+  ?crime am:hasCrimeAmount ?CrimeAmount .
+  ?pop am:hasPopAmount ?PopAmount .
+}

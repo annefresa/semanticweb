@@ -1,0 +1,14 @@
+PREFIX am: <http://www.imn.htwk-leipizg.de/~amatthes/semweb/schema#>
+
+SELECT ?CrimeAmount ?UnempAmount
+WHERE{
+  ?crime am:hasCrimeDate ?Date .
+  ?unemp am:hasUnempDate ?Date .
+  ?crime am:hasCrimeCounty ?County .
+  
+  ?unemp am:unempInRegion ?Region .
+  ?County am:countyInRegion ?Region .
+  
+  ?crime am:hasCrimeAmount ?CrimeAmount .
+  ?unemp am:hasUnempAmount ?UnempAmount .
+}

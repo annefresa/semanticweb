@@ -1,0 +1,9 @@
+PREFIX am: <http://www.imn.htwk-leipizg.de/~amatthes/semweb/schema#>
+
+SELECT ?Date (SUM(?CrimeAmount) AS ?CrimeSum)
+WHERE{
+  ?crime am:hasCrimeDate ?Date .
+  ?crime am:hasCrimeAmount ?CrimeAmount .
+}
+GROUP BY ?Date
+ORDER BY ?Date
