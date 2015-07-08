@@ -1,0 +1,10 @@
+PREFIX am: <http://www.imn.htwk-leipizg.de/~amatthes/semweb/schema#>
+
+SELECT ?Region (SUM(?CrimeAmount) AS ?CrimeSum)
+WHERE{
+  ?crime am:hasCrimeCounty ?County .
+  ?crime am:hasCrimeAmount ?CrimeAmount .
+  ?County am:countyInRegion ?Region.
+}
+GROUP BY ?Region
+ORDER BY DESC (?CrimeSum)
